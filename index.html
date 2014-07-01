@@ -1,0 +1,25 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+		<title>Sample Chart.js</title>
+	</head>
+	<body>
+		<canvas id="sample-pie" width="300" height="300" />
+		<script src="js/Chart.min.js"></script>
+		<script>
+			var contentData = [
+				{ value: 45, color: "#9B59B6" },
+				{ value: 30, color: "#E74C3C" },
+				{ value: 13, color: "#3498DB" },
+				{ value : 8, color : "#2ECC71" },
+				{ value: 5, color: "#F1C40F"}
+			];
+			window.onLoad = function(){
+				var ctx = document.getElementById("sample-pie").getContext("2d");
+				var chart = new Chart(ctx).Pie(contentData);
+			}
+		</script>
+	</body>
+</html>
